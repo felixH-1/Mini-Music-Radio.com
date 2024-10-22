@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* 
+box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]
+*/
+
+body{
+    background-color: #1e1e1e;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background-color 1s ease;
+}
+
+body.light-mode {
+    background-color: #ddd;
+}
+
+body.light-mode .song-info {
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px black ;
+}
+
+body.light-mode .song-info .artist-name {
+    color: #000;
+    transition: 1s ease;
+}
+body.light-mode .song-info .song-name {
+    color: #1a1a1a;
+    transition: 1s ease;
+}
+
+body.light-mode .song-info .progress-bar{
+    background-color: #565656;
+    transition: 1s ease;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+body.light-mode .song-info .progress-bar .fill-bar{
+    width: 0;
+    height: 6px;
+    border-radius: 20px;
+    background: #39bf24;
+}
+
+body.light-mode .song-info .time {
+    color: #1a1a1a;
+    transition: 1s ease;
+}
+
+body.light-mode .disk .cover{
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    border:  3px solid #000000;
+    border-radius: 50%;
+    transition: 1s ease;
+}
+
+/* body.light-mode .disk .circle{
+    background-color: #000;
+} */
+
+body.light-mode .controls{
+    display: flexbox;
+    margin-top: -5px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #f0f0f0;
+    width: 450px;
+    height: 100px;
+    border-radius: 20px;
+    transition: 1s ease;
+    text-align: center;
+    box-shadow: 0 2px 27px black;;
+}
+
+body.light-mode .controls #play{
+    background-color: #1abd20;
+    color: #fff;
+    padding: 15px 17px 14px 17px;
+    font-size: 28px;
+    border-radius: 50%;
+    transition: all 0.3 ease;
+}
+
+body.light-mode .controls #play:hover{
+    background:#046603;
+}
+
+body.light-mode .controls i{
+    padding: 30px 8px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #515050;
+    transition: all 0.3s ease;
+}
+
+body.light-mode .controls i:hover{
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+}
+
+/* DARK MODE THEME */
+/* DIVIDER: BEETWEEN TOGLE*/
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+body.light-mode .dev{
+    color: #cfcccc;
+    transition: 1s ease;
+}
+
+.dev{
+    position: absolute;
+    right: 49px;
+    top: 69px;
+    user-select: none;
+    font-size: 10px;
+    color: #494848;
+    transition: 1s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* DIVIDER: BEETWEEN TOGLE*/
+/* LIGHT MODE THEME */
+
+.container{
+    position: relative;
+    padding: 10px;
+}
+
+.container .song-info{
+    background-color: #000;
+    margin: 0 15px;
+    padding: 15px 15px 5pc 150px;
+    border-radius: 15px 15px 0 0;
+    height: 35px;
+    box-shadow: 0 0px 20px rgb(255, 255, 255);
+    transition: 1s ease;
+}
+
+.container .song-info .artist-name{
+    color: #b9b9b9;
+    font-size: 14px;
+    margin: 3px 0 20px;
+    user-select: none;
+    transition: 1s ease;
+}
+
+.container .song-info .song-name{
+    color: #fff;
+    font-weight: bold;
+    user-select: none;
+    font-size: 18px;
+    transition: 1s ease;
+}
+
+.container .song-info .progress-bar{
+    background-color: #505050;
+    border-radius: 20px;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+.container .song-info .progress-bar .fill-bar{
+    width: 0;
+    height: 6px;
+    border-radius: 20px;
+    transition: 1s ease;
+    background: #1db954;
+}
+
+.container .song-info .time{
+    font-size: 15px;
+    color: #b9b9b9;
+    user-select: none;
+    margin: 10px 0;
+}
+
+.container .disk{
+    max-width: 120px;
+}
+
+.container .disk .active{
+    animation: rotate 3s linear 0s infinite forwards;
+}
+
+.container .disk .cover{
+    width: 145px;
+    height: 145px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url(assets/1.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    border:  3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    transition: all 1s ease;
+}
+
+/* .container .disk .circle{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 70px;
+    top: 29%;
+    background-color: #fff;
+    z-index: 1;
+    border-radius: 50%;
+} */
+
+.container .controls{
+    display: flexbox;
+    margin-top: -5px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #292929;
+    width: 450px;
+    height: 100px;
+    transition: 1s ease;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0px 20px rgb(255, 255, 255);
+}
+
+.container .controls #play{
+    background-color: #1db954;
+    color: #fff;
+    padding: 15px 17px 14px 17px;
+    font-size: 28px;
+    border-radius: 50%;
+    transition: all 0.3 ease;
+}
+
+.container .controls #play:hover{
+    background:#189945;
+}
+
+.container .controls i{
+    padding: 30px 8px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #919191;
+    transition: all 0.3s ease;
+}
+
+.container .controls i:hover{
+    color: #fff;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

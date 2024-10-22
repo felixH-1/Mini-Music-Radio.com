@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Music Radio | Felix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+<!-- Link source: https://youtu.be/SAzB_M2wpR0?si=-IcKAFp0Y5zR-8Lk -->
+<!-- access this link:
+http://127.0.0.1:3000/Project%203%20-%20Mini%20Music%20Radio/index.html -->
+</head>
+<!-- UPDATE NEXT:
+- ADJUSTMENT OF NIGHT MODE AND LIGHT MODE
+LIGHTMODE ( FULL WHITE)
+DARK MODE (FULL DARK) 
+-->
+<body>
+     <button id="theme-toggle" class="theme-toggle">🌙</button>
+    
+     <div class="container">
+        <div class="song-info">
+            <div class="song-name"></div>
+            <div class="dev">Felix</div>
+            <div class="artist-name"></div>
+            <div class="progress-bar">
+                <div class="fill-bar"></div>
+            </div>
+            <div class="time">0:00 - 0:00</div>
+        </div>
+        <div class="disk">
+            <div class="circle"></div>
+            <div id="cover" class="cover"></div>
+        </div>
+        <div class="controls">
+            <i id="prev" class="prev-btn fa-solid fa-backward"></i>
+            <i id="play" class="play-btn fa-solid fa-play"></i>
+            <i id="next" class="next-btn fa-solid fa-forward"></i>
+        </div>
+     </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
